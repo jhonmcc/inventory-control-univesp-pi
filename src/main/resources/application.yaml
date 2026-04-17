@@ -1,3 +1,21 @@
 spring:
   application:
     name: inventory.control
+  h2:
+    console:
+      enable: true
+      path: /h2-console
+    datasource:
+      url: jdbc:h2:mem:stockcontrol
+      username: sa
+      password: pass
+      driverClassName: org.h2.Driver
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: update
+
+  server:
+    port: 8081
+    servlet:
+      context-path: /api
