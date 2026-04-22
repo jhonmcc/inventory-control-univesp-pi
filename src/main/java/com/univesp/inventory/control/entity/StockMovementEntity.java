@@ -1,5 +1,6 @@
 package com.univesp.inventory.control.entity;
 
+import com.univesp.inventory.control.util.MovementType;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

@@ -10,14 +10,18 @@ public class ProductEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
     private String name;
-    private String description;
-    private String sku;
-    private Double costPrice;
-    private Double salePrice;
-    private Integer minStock;
 
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private CategoryEntity category;
+    @Column
+    private String description;
+
+//    private String sku;
+//    private Double costPrice;
+//    private Double salePrice;
+//    private Integer minStock;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "category_id")
+//    private CategoryEntity category;
 }
