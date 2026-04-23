@@ -4,7 +4,6 @@ import com.univesp.inventory.control.dto.ProductDTO;
 import com.univesp.inventory.control.entity.ProductEntity;
 import com.univesp.inventory.control.repository.ProductRepository;
 import com.univesp.inventory.control.service.ProductService;
-import lombok.val;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class ProductServiceImpl implements ProductService {
 
     public Boolean registerProduct(ProductDTO product){
         try{
-            productRepository.save(new ProductEntity());
+            productRepository.save(new ProductEntity(null, product.getName(), product.getDescription()));
             return true;
         }
         catch (Exception e){
